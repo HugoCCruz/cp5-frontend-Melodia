@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melodia - Sua Música, Sua Forma</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'dark-bg': '#0F0F0F',
+              'primary-text': '#FFFFFF',
+              'secondary-text': '#B3B3B3',
+              'vibrant-purple': '#7A00FF',
+              'vibrant-pink': '#FF006E',
+              'neon-cyan': '#00FFD1'
+            },
+            fontFamily: {
+              'inter': ['Inter', 'sans-serif'],
+              'poppins': ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-dark-bg text-primary-text font-inter">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-dark-bg/80 backdrop-blur-lg border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 bg-gradient-to-r from-vibrant-purple to-vibrant-pink rounded-lg flex items-center justify-center">
+              <i class="fas fa-music text-white text-sm"></i>
+            </div>
+            <span class="text-xl font-bold font-poppins">Melodia</span>
+          </div>
+          
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-secondary-text hover:text-primary-text transition-colors">Início</a>
+            <a href="#features" class="text-secondary-text hover:text-primary-text transition-colors">Funcionalidades</a>
+            <a href="#testimonials" class="text-secondary-text hover:text-primary-text transition-colors">Depoimentos</a>
+            <a href="#contact" class="text-secondary-text hover:text-primary-text transition-colors">Contato</a>
+          </div>
+          
+          <button class="md:hidden text-primary-text">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins leading-tight">
+                <span class="text-primary-text">Melodia:</span>
+                <br>
+                <span class="bg-gradient-to-r from-vibrant-purple to-vibrant-pink bg-clip-text text-transparent">
+                  Sua Música,
+                </span>
+                <br>
+                <span class="bg-gradient-to-r from-vibrant-pink to-neon-cyan bg-clip-text text-transparent">
+                  Sua Forma
+                </span>
+              </h1>
+              
+              <p class="text-xl text-secondary-text max-w-lg leading-relaxed">
+                Descubra uma nova maneira de ouvir música. Qualidade superior, playlists inteligentes e descobertas incríveis te esperam.
+              </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button class="group bg-gradient-to-r from-vibrant-purple to-vibrant-pink px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(122,0,255,0.3)]">
+                <i class="fas fa-play mr-2 group-hover:animate-pulse"></i>
+                Ouvir Agora
+              </button>
+              
+              <button class="border-2 border-vibrant-purple text-vibrant-purple px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:bg-vibrant-purple hover:text-white hover:scale-105">
+                <i class="fas fa-download mr-2"></i>
+                Download Gratuito
+              </button>
+            </div>
+            
+            <div class="flex items-center space-x-8 pt-4">
+              <div class="text-center">
+                <div class="text-2xl font-bold text-neon-cyan">1M+</div>
+                <div class="text-sm text-secondary-text">Downloads</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-vibrant-pink">50M+</div>
+                <div class="text-sm text-secondary-text">Músicas</div>
+              </div>
+              <div class="text-center">
+                <div class="text-2xl font-bold text-vibrant-purple">4.9★</div>
+                <div class="text-sm text-secondary-text">Avaliação</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative">
+            <div class="relative z-10 bg-gradient-to-br from-vibrant-purple/20 to-vibrant-pink/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+              <div class="aspect-video bg-gradient-to-br from-dark-bg to-gray-900 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-vibrant-purple/10 to-vibrant-pink/10"></div>
+                <div class="relative z-10 text-center">
+                  <div class="w-20 h-20 bg-gradient-to-r from-vibrant-purple to-vibrant-pink rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
+                    <i class="fas fa-play text-3xl text-white"></i>
+                  </div>
+                  <p class="text-secondary-text">Vídeo de Demonstração</p>
+                  <p class="text-sm text-secondary-text mt-2">Veja o Melodia em ação</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="absolute -top-4 -right-4 w-12 h-12 bg-neon-cyan rounded-full animate-bounce opacity-80"></div>
+            <div class="absolute -bottom-4 -left-4 w-8 h-8 bg-vibrant-pink rounded-full animate-pulse opacity-60"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-24 bg-gradient-to-b from-dark-bg to-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-6">
+            Por que escolher o 
+            <span class="bg-gradient-to-r from-vibrant-purple to-vibrant-pink bg-clip-text text-transparent">Melodia?</span>
+          </h2>
+          <p class="text-xl text-secondary-text max-w-3xl mx-auto">
+            Experiência musical revolucionária que transforma a forma como você descobre e ouve suas músicas favoritas
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Benefit 1 -->
+          <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-vibrant-purple/50 transition-all duration-300 hover:scale-105">
+            <div class="w-16 h-16 bg-gradient-to-r from-vibrant-purple to-vibrant-pink rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i class="fas fa-volume-up text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 font-poppins">Qualidade Superior</h3>
+            <p class="text-secondary-text">Audio de alta qualidade com tecnologia de ponta para uma experiência sonora imersiva</p>
+          </div>
+          
+          <!-- Benefit 2 -->
+          <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-vibrant-pink/50 transition-all duration-300 hover:scale-105">
+            <div class="w-16 h-16 bg-gradient-to-r from-vibrant-pink to-neon-cyan rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i class="fas fa-list-music text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 font-poppins">Playlists Inteligentes</h3>
+            <p class="text-secondary-text">Criação automática de playlists baseada em seus gostos e humor do momento</p>
+          </div>
+          
+          <!-- Benefit 3 -->
+          <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 hover:scale-105">
+            <div class="w-16 h-16 bg-gradient-to-r from-neon-cyan to-vibrant-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i class="fas fa-compass text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 font-poppins">Descoberta Musical</h3>
+            <p class="text-secondary-text">Algoritmo avançado que descobre novos artistas e músicas perfeitas para você</p>
+          </div>
+          
+          <!-- Benefit 4 -->
+          <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-vibrant-purple/50 transition-all duration-300 hover:scale-105">
+            <div class="w-16 h-16 bg-gradient-to-r from-vibrant-purple to-vibrant-pink rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <i class="fas fa-mobile-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 font-poppins">Interface Intuitiva</h3>
+            <p class="text-secondary-text">Design moderno e fácil de usar que torna a navegação uma experiência prazerosa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-dark-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-6">
+            Funcionalidades 
+            <span class="bg-gradient-to-r from-vibrant-pink to-neon-cyan bg-clip-text text-transparent">Incríveis</span>
+          </h2>
+        </div>
+        
+        <div class="space-y-24">
+          <!-- Feature 1 -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-vibrant-purple to-vibrant-pink rounded-xl flex items-center justify-center">
+                  <i class="fas fa-headphones text-xl text-white"></i>
+                </div>
+                <h3 class="text-3xl font-bold font-poppins">Áudio de Alta Fidelidade</h3>
+              </div>
+              <p class="text-lg text-secondary-text leading-relaxed">
+                Experimente cada nuance musical com nossa tecnologia de áudio avançada. 
+                Suporte para formatos lossless e equalização personalizada para uma experiência única.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Suporte a FLAC, WAV e MP3 320kbps</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Equalização de 10 bandas personalizável</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Presets otimizados para diferentes gêneros</span>
+                </li>
+              </ul>
+            </div>
+            <div class="relative">
+              <div class="aspect-square bg-gradient-to-br from-vibrant-purple/20 to-vibrant-pink/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                <div class="w-full h-full bg-gradient-to-br from-dark-bg to-gray-900 rounded-2xl flex items-center justify-center">
+                  <i class="fas fa-waveform-lines text-6xl text-vibrant-purple opacity-50"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="lg:order-2 space-y-6">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-vibrant-pink to-neon-cyan rounded-xl flex items-center justify-center">
+                  <i class="fas fa-brain text-xl text-white"></i>
+                </div>
+                <h3 class="text-3xl font-bold font-poppins">IA Musical Avançada</h3>
+              </div>
+              <p class="text-lg text-secondary-text leading-relaxed">
+                Nossa inteligência artificial aprende seus gostos e cria recomendações personalizadas, 
+                descobrindo músicas que você nem sabia que adoraria.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Análise de preferências em tempo real</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Recomendações baseadas no humor</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Descoberta de artistas emergentes</span>
+                </li>
+              </ul>
+            </div>
+            <div class="lg:order-1 relative">
+              <div class="aspect-square bg-gradient-to-br from-vibrant-pink/20 to-neon-cyan/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                <div class="w-full h-full bg-gradient-to-br from-dark-bg to-gray-900 rounded-2xl flex items-center justify-center">
+                  <i class="fas fa-robot text-6xl text-vibrant-pink opacity-50"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-gradient-to-r from-neon-cyan to-vibrant-purple rounded-xl flex items-center justify-center">
+                  <i class="fas fa-users text-xl text-white"></i>
+                </div>
+                <h3 class="text-3xl font-bold font-poppins">Social & Compartilhamento</h3>
+              </div>
+              <p class="text-lg text-secondary-text leading-relaxed">
+                Conecte-se com amigos, compartilhe descobertas musicais e crie playlists colaborativas. 
+                A música é ainda melhor quando compartilhada.
+              </p>
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Playlists colaborativas em tempo real</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Feed social de descobertas musicais</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <i class="fas fa-check text-neon-cyan"></i>
+                  <span>Integração com redes sociais</span>
+                </li>
+              </ul>
+            </div>
+            <div class="relative">
+              <div class="aspect-square bg-gradient-to-br from-neon-cyan/20 to-vibrant-purple/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+                <div class="w-full h-full bg-gradient-to-br from-dark-bg to-gray-900 rounded-2xl flex items-center justify-center">
+                  <i class="fas fa-share-nodes text-6xl text-neon-cyan opacity-50"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gradient-to-b from-gray-900 to-dark-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-6">
+            O que nossos usuários 
+            <span class="bg-gradient-to-r from-vibrant-purple to-vibrant-pink bg-clip-text text-transparent">dizem</span>
+          </h2>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-vibrant-purple/50 transition-all duration-300 hover:scale-105">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-r from-vibrant-purple to-vibrant-pink rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Maria Silva</h4>
+                <p class="text-secondary-text text-sm">Musicista</p>
+              </div>
+            </div>
+            <p class="text-secondary-text italic mb-4">
+              "O Melodia revolucionou minha forma de descobrir música. As recomendações são incríveis e a qualidade do áudio é impressionante!"
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-vibrant-pink/50 transition-all duration-300 hover:scale-105">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-r from-vibrant-pink to-neon-cyan rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">João Santos</h4>
+                <p class="text-secondary-text text-sm">DJ Profissional</p>
+              </div>
+            </div>
+            <p class="text-secondary-text italic mb-4">
+              "Interface intuitiva e funcionalidades profissionais. Uso o Melodia tanto para ouvir quanto para preparar meus sets. Perfeito!"
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          
+          <!-- Testimonial 3 -->
+          <div class="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-neon-cyan/50 transition-all duration-300 hover:scale-105">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-gradient-to-r from-neon-cyan to-vibrant-purple rounded-full flex items-center justify-center mr-4">
+                <i class="fas fa-user text-white"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Ana Costa</h4>
+                <p class="text-secondary-text text-sm">Estudante</p>
+              </div>
+            </div>
+            <p class="text-secondary-text italic mb-4">
+              "Descobri tantos artistas novos que viraram meus favoritos! As playlists colaborativas com meus amigos são o máximo."
+            </p>
+            <div class="flex text-yellow-400">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-dark-bg">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold font-poppins mb-6">
+            Junte-se à 
+            <span class="bg-gradient-to-r from-vibrant-pink to-neon-cyan bg-clip-text text-transparent">Revolução Musical</span>
+          </h2>
+          <p class="text-xl text-secondary-text max-w-2xl mx-auto">
+            Seja um dos primeiros a experimentar o futuro da música digital. Cadastre-se e receba acesso antecipado.
+          </p>
+        </div>
+        
+        <div class="bg-gradient-to-br from-white/5 to-white/10 border border-white/10 rounded-3xl p-8 md:p-12">
+          <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="nome" class="block text-sm font-medium mb-2">Nome Completo</label>
+                <input 
+                  type="text" 
+                  id="nome" 
+                  class="w-full px-4 py-3 bg-dark-bg border border-white/20 rounded-xl text-primary-text placeholder-secondary-text focus:border-vibrant-purple focus:ring-2 focus:ring-vibrant-purple/20 transition-all duration-300"
+                  placeholder="Seu nome"
+                  required
+                >
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">E-mail</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="w-full px-4 py-3 bg-dark-bg border border-white/20 rounded-xl text-primary-text placeholder-secondary-text focus:border-vibrant-purple focus:ring-2 focus:ring-vibrant-purple/20 transition-all duration-300"
+                  placeholder="seu@email.com"
+                  required
+                >
+              </div>
+            </div>
+            
+            <div>
+              <label for="generos" class="block text-sm font-medium mb-2">Gêneros Favoritos</label>
+              <select 
+                id="generos" 
+                class="w-full px-4 py-3 bg-dark-bg border border-white/20 rounded-xl text-primary-text focus:border-vibrant-purple focus:ring-2 focus:ring-vibrant-purple/20 transition-all duration-300"
+                required
+              >
+                <option value="">Selecione seus gêneros favoritos</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="eletronica">Eletrônica</option>
+                <option value="hiphop">Hip Hop</option>
+                <option value="jazz">Jazz</option>
+                <option value="classica">Clássica</option>
+                <option value="brasileira">MPB</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+              <input 
+                type="checkbox" 
+                id="newsletter" 
+                class="w-5 h-5 bg-dark-bg border-2 border-white/20 rounded focus:border-vibrant-purple accent-vibrant-purple"
+              >
+              <label for="newsletter" class="text-sm text-secondary-text">
+                Aceito receber novidades sobre o Melodia e ofertas exclusivas
+              </label>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="w-full bg-gradient-to-r from-vibrant-purple to-vibrant-pink px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(122,0,255,0.3)]"
+            >
+              <i class="fas fa-paper-plane mr-2"></i>
+              Garantir Acesso Antecipado
+            </button>
+          </form>
+          
+          <div class="mt-8 pt-8 border-t border-white/10">
+            <p class="text-center text-sm text-secondary-text">
+              Ao se cadastrar, você concorda com nossos 
+              <a href="#" class="text-vibrant-purple hover:text-vibrant-pink transition-colors">Termos de Uso</a> 
+              e 
+              <a href="#" class="text-vibrant-purple hover:text-vibrant-pink transition-colors">Política de Privacidade</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-gray-900 to-dark-bg py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <!-- Brand -->
+          <div class="space-y-6">
+            <div class="flex items-center space-x-2">
+              <div class="w-10 h-10 bg-gradient-to-r from-vibrant-purple to-vibrant-pink rounded-lg flex items-center justify-center">
+                <i class="fas fa-music text-white text-lg"></i>
+              </div>
+              <span class="text-2xl font-bold font-poppins">Melodia</span>
+            </div>
+            <p class="text-secondary-text">
+              Transformando a experiência musical com tecnologia de ponta e design intuitivo.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-vibrant-purple/20 transition-colors">
+                <i class="fab fa-facebook text-primary-text"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-vibrant-purple/20 transition-colors">
+                <i class="fab fa-instagram text-primary-text"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-vibrant-purple/20 transition-colors">
+                <i class="fab fa-twitter text-primary-text"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-vibrant-purple/20 transition-colors">
+                <i class="fab fa-spotify text-primary-text"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Product -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 font-poppins">Produto</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Funcionalidades</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Download</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Preços</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Premium</a></li>
+            </ul>
+          </div>
+          
+          <!-- Support -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 font-poppins">Suporte</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Central de Ajuda</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Contato</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Bug Report</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Status</a></li>
+            </ul>
+          </div>
+          
+          <!-- Legal -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 font-poppins">Legal</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Termos de Uso</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Privacidade</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Cookies</a></li>
+              <li><a href="#" class="text-secondary-text hover:text-primary-text transition-colors">Licenças</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pt-8 border-t border-white/10">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-secondary-text text-sm">
+              © 2025 Melodia. Todos os direitos reservados.
+            </p>
+            <p class="text-secondary-text text-sm mt-4 md:mt-0">
+              Feito com <i class="fas fa-heart text-vibrant-pink"></i> para amantes da música
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/main.js"></script>
+  </body>
+</html>
